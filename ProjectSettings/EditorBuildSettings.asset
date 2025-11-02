@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 59361e3bb21f6bc4d9b50f9072f4401e
+  - enabled: 1
+    path: Assets/Scenes/Arno_Hospital.unity
+    guid: 5a067695efecfaf48bd0a7c46eec9757
+  - enabled: 1
+    path: Assets/Scenes/GameInfoMenu.unity
+    guid: d4c391cd0e3d060429666fa906ae794d
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: dac3f6a7aabee6248b00a361a26db3eb, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
