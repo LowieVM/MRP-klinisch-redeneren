@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Arno_Hospital.unity
     guid: 5a067695efecfaf48bd0a7c46eec9757
   - enabled: 1
-    path: Assets/Scenes/GameInfoMenu.unity
+    path: Assets/Scenes/GameInfoScreen.unity
     guid: d4c391cd0e3d060429666fa906ae794d
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: 261b42b3310ddb14fa6751440cde5a69
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: dac3f6a7aabee6248b00a361a26db3eb, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

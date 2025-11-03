@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
 
     public void OpenInfo()
     {
-        SceneManager.LoadScene("GameInfoMenu");
+        SceneManager.LoadScene("GameInfoScreen");
     }
 
     public void QuitGame()

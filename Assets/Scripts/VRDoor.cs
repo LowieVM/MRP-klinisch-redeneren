@@ -10,6 +10,10 @@ public class VRDoor : MonoBehaviour
     public float doorOpenAngle = 90;    // How far the door swings open
     public float openSpeed = 2f;         // How quickly the door moves
 
+    [Header("Audio")]
+    [Tooltip("AudioSource used to play the door sound. The clip assigned to this AudioSource will be played when the door starts opening or closing.")]
+    public AudioSource audioSource;
+
     private bool isOpen = false;         // Track if the door is open
     private Quaternion doorClosedRot;    // Original rotation
     private Quaternion doorOpenRot;      // Target open rotation
@@ -17,11 +21,28 @@ public class VRDoor : MonoBehaviour
 
     void Start()
     {
+        if (door == null)
+        {
+            Debug.LogError("[VRDoor] Door Transform is not assigned.");
+            enabled = false;
+            return;
+        }
+
         // Store starting (closed) rotation
         doorClosedRot = door.localRotation;
 
         // Calculate target open rotation
         doorOpenRot = door.localRotation * Quaternion.Euler(0, doorOpenAngle, 0);
+
+        // Auto-find AudioSource if none assigned
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>() ?? door.GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                Debug.Log("[VRDoor] No AudioSource found. Assign one or add a clip to the AudioSource to play door sounds.");
+            }
+        }
     }
 
     void Update()
@@ -43,12 +64,29 @@ public class VRDoor : MonoBehaviour
             }
         }
     }
+
     public void ToggleDoor()
     {
         if (!isMoving)
         {
             isOpen = !isOpen;   // flip state
             isMoving = true;    // start movement
+
+            // Play the clip when the door starts moving (opening or closing)
+            PlayDoorSound();
         }
+    }
+
+    private void PlayDoorSound()
+    {
+        if (audioSource == null)
+            return;
+
+        var clip = audioSource.clip;
+        if (clip == null)
+            return;
+
+        // Play the AudioSource's clip once without altering AudioSource.clip or other settings
+        audioSource.PlayOneShot(clip);
     }
 }
