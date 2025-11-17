@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void BackToMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -11,7 +10,12 @@ public class MenuController : MonoBehaviour
     
     public void PlayGame()
     {
-        SceneManager.LoadScene("Arno_Hospital");
+        SceneManager.LoadScene("FullNewHospital");
+    }
+
+    public void PlaySecondLevel()
+    {
+        SceneManager.LoadScene("FullOldHospital");
     }
 
     public void OpenInfo()
@@ -22,7 +26,6 @@ public class MenuController : MonoBehaviour
     public void QuitGame()
     {
 #if UNITY_EDITOR
-        // Stop playing the scene in the Unity Editor
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         // Quit the built application
