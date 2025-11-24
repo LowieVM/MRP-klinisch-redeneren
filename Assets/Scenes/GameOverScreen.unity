@@ -1034,7 +1034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4024313183122114904, guid: e34122e02a3c6cc498490ed451687677, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlaySoundAndLoad
+      value: LoadSceneAfterDelay
       objectReference: {fileID: 0}
     - target: {fileID: 4024313183122114904, guid: e34122e02a3c6cc498490ed451687677, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
