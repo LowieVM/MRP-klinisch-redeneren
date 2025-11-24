@@ -106,6 +106,7 @@ public class FootstepSound : MonoBehaviour
             // If the AudioSource.clip is set to loop, use continuous play while moving and stop when stopped.
             if (footstepSource.loop)
             {
+                footstepSource.volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
                 if (speed > minSpeed)
                 {
                     if (!footstepSource.isPlaying)
@@ -155,7 +156,8 @@ public class FootstepSound : MonoBehaviour
             if (stepTimer >= stepInterval)
             {
                 footstepSource.pitch = Random.Range(pitchVariation.x, pitchVariation.y);
-                footstepSource.PlayOneShot(clip);
+                float volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
+                footstepSource.PlayOneShot(clip, volume);
                 if (debugLogging) Debug.Log("[FootstepSound] Played per-step footstep clip.");
                 stepTimer = 0f;
             }

@@ -53,7 +53,9 @@ public class MenuController : MonoBehaviour
 
                     if (source.clip != null)
                     {
-                        source.PlayOneShot(source.clip, source.volume);
+                        float volume = source.volume * SoundManager.Instance.SfxVolume;
+                        source.PlayOneShot(source.clip, volume);
+
                         float pitch = Mathf.Approximately(source.pitch, 0f) ? 1f : Mathf.Abs(source.pitch);
                         delay = source.clip.length / pitch;
                     }

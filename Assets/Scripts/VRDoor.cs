@@ -87,6 +87,7 @@ public class VRDoor : MonoBehaviour
             return;
 
         // Play the AudioSource's clip once without altering AudioSource.clip or other settings
-        audioSource.PlayOneShot(clip);
+        float volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
+        audioSource.PlayOneShot(audioSource.clip, volume);
     }
 }
