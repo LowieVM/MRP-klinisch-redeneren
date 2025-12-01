@@ -14,6 +14,20 @@ public class VRDoor : MonoBehaviour
     [Tooltip("AudioSource used to play the door sound. The clip assigned to this AudioSource will be played when the door starts opening or closing.")]
     public AudioSource audioSource;
 
+    [Header("Timer")]
+    [Tooltip("Assign the TimerController that should be started when the door opens.")]
+    public TimerController timerController;
+
+    [Tooltip("Assign the Gameobject that holds the timer and is hidden.")]
+    public GameObject timerSection;
+
+    [Tooltip("If true this door will trigger the TimerController when opened. Leave false for doors that should not trigger the timer.")]
+    public bool triggerTimerOnOpen = false;
+
+    // Tracks whether we've already started the timer after an open
+    // starts as false and is set true when the door finishes opening
+    private bool timerTriggered = false;
+
     private bool isOpen = false;         // Track if the door is open
     private Quaternion doorClosedRot;    // Original rotation
     private Quaternion doorOpenRot;      // Target open rotation
@@ -61,6 +75,23 @@ public class VRDoor : MonoBehaviour
                 door.localRotation = targetRot; // snap to target
                 isMoving = false;
                 Debug.Log(isOpen ? "Door Opened!" : "Door Closed!");
+
+                // If the door finished opening and we haven't triggered the timer yet, start it.
+                // Only trigger if this door is configured to trigger the timer.
+                if (isOpen && !timerTriggered && triggerTimerOnOpen)
+                {
+                    timerTriggered = true;
+                    if (timerController != null)
+                    {
+                        // TimerController exposes StartTimer()
+                        timerSection.SetActive(true);
+                        timerController.StartTimer();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[VRDoor] TimerController reference is not set. Assign it in the Inspector to start the timer when the door opens.");
+                    }
+                }
             }
         }
     }
