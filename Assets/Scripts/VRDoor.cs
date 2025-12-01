@@ -75,23 +75,6 @@ public class VRDoor : MonoBehaviour
                 door.localRotation = targetRot; // snap to target
                 isMoving = false;
                 Debug.Log(isOpen ? "Door Opened!" : "Door Closed!");
-
-                // If the door finished opening and we haven't triggered the timer yet, start it.
-                // Only trigger if this door is configured to trigger the timer.
-                if (isOpen && !timerTriggered && triggerTimerOnOpen)
-                {
-                    timerTriggered = true;
-                    if (timerController != null)
-                    {
-                        // TimerController exposes StartTimer()
-                        timerSection.SetActive(true);
-                        timerController.StartTimer();
-                    }
-                    else
-                    {
-                        Debug.LogWarning("[VRDoor] TimerController reference is not set. Assign it in the Inspector to start the timer when the door opens.");
-                    }
-                }
             }
         }
     }
@@ -105,6 +88,22 @@ public class VRDoor : MonoBehaviour
 
             // Play the clip when the door starts moving (opening or closing)
             PlayDoorSound();
+            // If the door finished opening and we haven't triggered the timer yet, start it.
+            // Only trigger if this door is configured to trigger the timer.
+            if (isOpen && !timerTriggered && triggerTimerOnOpen)
+            {
+                timerTriggered = true;
+                if (timerController != null)
+                {
+                    // TimerController exposes StartTimer()
+                    timerSection.SetActive(true);
+                    timerController.StartTimer();
+                }
+                else
+                {
+                    Debug.LogWarning("[VRDoor] TimerController reference is not set. Assign it in the Inspector to start the timer when the door opens.");
+                }
+            }
         }
     }
 

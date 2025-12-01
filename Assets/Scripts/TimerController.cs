@@ -1,30 +1,69 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerController : MonoBehaviour
 {
+    public static TimerController Instance { get; private set; }
+
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private bool startOnAwake = true;
+    [Tooltip("If true the TimerController GameObject will persist between scene loads.")]
+    [SerializeField] private bool persistAcrossScenes = true;
+    [Tooltip("If true the timer will be reset to 00:00:00 when a new scene loads.")]
+    [SerializeField] private bool resetOnSceneLoad = true;
 
     private float elapsed;
     private bool running;
 
     void Awake()
     {
-        // If no Text assigned, try to use a Text on the same GameObject
+        // Singleton handling
+        if (Instance == null)
+        {
+            Instance = this;
+            if (persistAcrossScenes)
+                DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // Try to use a TMP on the same GameObject if not assigned
         if (timerText == null)
             timerText = GetComponent<TextMeshProUGUI>();
 
-        UpdateText(0f);
+        // Subscribe to scene load to (re)attach UI or reset as required
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        // Initialize display using current elapsed (don't force reset here)
+        UpdateText(elapsed);
     }
 
-    // Will start automatically if startOnAwake is true
+    void OnDestroy()
+    {
+        if (Instance == this)
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     void Start()
     {
-        if (startOnAwake)
-            StartTimerInternal();
+        // Only run start logic for the singleton instance
+        if (Instance != this) return;
+
+        // If configured to start on awake and not already running:
+        if (startOnAwake && !running)
+        {
+            // Start and reset only if elapsed == 0, otherwise resume current elapsed.
+            if (elapsed <= 0f)
+                StartTimerInternal(reset: true);
+            else
+                StartTimerInternal(reset: false);
+        }
     }
 
     void Update()
@@ -35,12 +74,26 @@ public class TimerController : MonoBehaviour
         UpdateText(elapsed);
     }
 
-    // Start the timer (resets elapsed to 0)
-    public void StartTimerInternal()
+    // Internal start implementation with optional reset.
+    private void StartTimerInternal(bool reset)
     {
-        elapsed = 0f;
+        if (reset)
+            elapsed = 0f;
         running = true;
         UpdateText(elapsed);
+    }
+
+    // Public API kept for other scripts (e.g. VRDoor)
+    // Call StartTimer() to reset+start (backwards compatible).
+    public void StartTimer()
+    {
+        StartTimer(reset: true);
+    }
+
+    // New API: allow starting without resetting elapsed (useful when you want timer to continue across scenes)
+    public void StartTimer(bool reset)
+    {
+        StartTimerInternal(reset);
     }
 
     // Stop/pause the timer
@@ -49,29 +102,76 @@ public class TimerController : MonoBehaviour
         running = false;
     }
 
-    // Reset the timer to zero (won't start unless StartTimerInternal is called)
+    // Reset the timer to zero (won't start unless StartTimer(true) is called)
     public void ResetTimer()
     {
         elapsed = 0f;
+        running = false;
         UpdateText(elapsed);
     }
 
-    // Public helper to be called from other scripts (e.g. VRDoor) when the door opens.
-    // Keeps the TimerController API intent-clear.
-    public void StartTimer()
+    // Attach a TMP label from the current scene to display the time.
+    // Call this from other scripts (e.g. scene UI initializers) if automatic finding doesn't work.
+    public void AttachText(TextMeshProUGUI text)
     {
-        StartTimerInternal();
+        timerText = text;
+        UpdateText(elapsed);
+    }
+
+    // Called when a new scene finishes loading. Attempt to attach a TextMeshProUGUI if none assigned.
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // If the controller persists but should reset on scene load, reset it now before updating/attaching UI.
+        if (resetOnSceneLoad)
+        {
+            elapsed = 0f;
+            running = false;
+        }
+
+        // 1) Try GameObject named "TimerText"
+        var go = GameObject.Find("TimerText");
+        if (go != null)
+        {
+            var tmp = go.GetComponent<TextMeshProUGUI>();
+            if (tmp != null)
+            {
+                AttachText(tmp);
+                return;
+            }
+        }
+
+        // 2) Try tag "TimerText" (create this tag and assign to your timer text in the scene)
+        try
+        {
+            var tagged = GameObject.FindWithTag("TimerText");
+            if (tagged != null)
+            {
+                var tmp = tagged.GetComponent<TextMeshProUGUI>();
+                if (tmp != null)
+                {
+                    AttachText(tmp);
+                    return;
+                }
+            }
+        }
+        catch (UnityException)
+        {
+            // Tag not created — ignore
+        }
+
+        // 3) Fallback: first TMP in scene
+        var all = FindObjectsOfType<TextMeshProUGUI>();
+        if (all != null && all.Length > 0)
+        {
+            AttachText(all[0]);
+        }
     }
 
     private void UpdateText(float seconds)
     {
         var t = TimeSpan.FromSeconds(seconds);
-        string text;
-
-        if (t.TotalHours >= 1)
-            text = string.Format("{0:D2}:{1:D2}:{2:D2}", (int)t.TotalHours, t.Minutes, t.Seconds);
-        else
-            text = string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
+        int hours = (int)t.TotalHours;
+        string text = string.Format("{0:D2}:{1:D2}:{2:D2}", hours, t.Minutes, t.Seconds);
 
         if (timerText != null)
             timerText.text = text;
