@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 87ac8dbb90cf7364fa4103d4b511056b
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/Tachycardic@0s.json
+  uploadId: 728075

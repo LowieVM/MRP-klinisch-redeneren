@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 89f54fa0e96e87247a285eb003cac576
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/compounds/Sweat.json
+  uploadId: 728075

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9e2ff1ccd89e4cc40983f0c5037e100e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Scenes/VitalsMonitorScenario.unity
+  uploadId: 728075

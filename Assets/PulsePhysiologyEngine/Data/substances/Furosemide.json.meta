@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cba9f4ac5ec0335498dd72907c58be0a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Furosemide.json
+  uploadId: 728075

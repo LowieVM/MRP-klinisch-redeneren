@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38fb26ac861956e4a9a893b05b00a940
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Scenes/Dev/ScreenSpace.unity
+  uploadId: 728075

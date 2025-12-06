@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 29053eb7e8e69184b949ccf2e1dfa762
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/Hassan@0s.json
+  uploadId: 728075

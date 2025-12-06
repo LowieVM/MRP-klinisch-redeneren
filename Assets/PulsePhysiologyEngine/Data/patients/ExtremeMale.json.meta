@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d94b6c34fff72554dbfa432e9f724350
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/patients/ExtremeMale.json
+  uploadId: 728075

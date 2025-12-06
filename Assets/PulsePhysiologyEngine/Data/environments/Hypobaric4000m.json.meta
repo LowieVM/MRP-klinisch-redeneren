@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 60189496629f4d44d9697c369825c4da
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/environments/Hypobaric4000m.json
+  uploadId: 728075

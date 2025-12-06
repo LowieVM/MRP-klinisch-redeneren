@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1fb5275f461e36d49b6df84409594ff4
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Bicarbonate.json
+  uploadId: 728075

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4deec69f8af2024cbb33706136a3709
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Carbaminohemoglobin.json
+  uploadId: 728075

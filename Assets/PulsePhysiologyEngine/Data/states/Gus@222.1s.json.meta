@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 12ffe5f479ff17b49a604aaf203aa594
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/Gus@222.1s.json
+  uploadId: 728075

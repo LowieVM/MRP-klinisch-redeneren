@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 379cf727dafc6574ba2452ddf598a198
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/Rick@0s.json
+  uploadId: 728075

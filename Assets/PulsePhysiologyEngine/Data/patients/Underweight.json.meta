@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5f78aa028bd8ffa4c8bb0c7905e9967f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/patients/Underweight.json
+  uploadId: 728075

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6fdc5cba8aa40df4f98d82aaf6b154cf
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/environments/CheyenneMountainAprilCool.json
+  uploadId: 728075

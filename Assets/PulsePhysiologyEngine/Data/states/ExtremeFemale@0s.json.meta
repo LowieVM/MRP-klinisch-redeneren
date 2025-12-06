@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9618d339fb2611d4fb42f23fac6cbff5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/ExtremeFemale@0s.json
+  uploadId: 728075

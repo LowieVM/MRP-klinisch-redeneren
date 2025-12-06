@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 56f90361cff9cf441a1684dd4dfb4ea8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Scripts/PulseActionOnClick.cs
+  uploadId: 728075

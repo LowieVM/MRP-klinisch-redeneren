@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8749fefbac1589b44b746616914f68c0
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Naloxone.json
+  uploadId: 728075

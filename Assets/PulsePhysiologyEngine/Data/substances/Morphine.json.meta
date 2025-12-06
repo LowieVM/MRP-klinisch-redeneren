@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8a851686867dfa84b9cbef3afbeb233c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Morphine.json
+  uploadId: 728075

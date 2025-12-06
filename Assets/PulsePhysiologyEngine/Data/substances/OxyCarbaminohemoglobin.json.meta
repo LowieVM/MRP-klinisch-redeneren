@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b214a1db745842a45965c5e2d57ecd6b
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/OxyCarbaminohemoglobin.json
+  uploadId: 728075

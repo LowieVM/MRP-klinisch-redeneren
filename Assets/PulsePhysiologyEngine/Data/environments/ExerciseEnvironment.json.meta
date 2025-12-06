@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2f8bde55eb818cf45bc48bbc5a730ced
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/environments/ExerciseEnvironment.json
+  uploadId: 728075

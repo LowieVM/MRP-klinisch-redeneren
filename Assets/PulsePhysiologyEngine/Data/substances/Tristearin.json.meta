@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 32dfaa324c35af141a25d1e6e5a85bc9
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Tristearin.json
+  uploadId: 728075

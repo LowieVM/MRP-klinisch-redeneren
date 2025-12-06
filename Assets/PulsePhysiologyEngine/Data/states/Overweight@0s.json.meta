@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 499ee50945870b545bd246e138479b98
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/Overweight@0s.json
+  uploadId: 728075

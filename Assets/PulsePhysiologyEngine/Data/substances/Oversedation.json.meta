@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 80b94605d55a1084caf2e19c1a94aa9a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Oversedation.json
+  uploadId: 728075

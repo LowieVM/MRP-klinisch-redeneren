@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 61ab5c55f86d65a498e79bce05f92e9f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/StandardMale@0s.json
+  uploadId: 728075

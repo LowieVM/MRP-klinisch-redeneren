@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dce1b1781e31c3c4bafb4fb89e5f7fb2
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Lactate.json
+  uploadId: 728075

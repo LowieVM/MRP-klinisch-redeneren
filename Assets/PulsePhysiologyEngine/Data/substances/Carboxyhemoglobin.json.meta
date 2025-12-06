@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d403ea975a98db74c869790448ff4fcd
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Carboxyhemoglobin.json
+  uploadId: 728075

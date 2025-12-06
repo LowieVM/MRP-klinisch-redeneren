@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5fb444bd9b656c647aec0dba30ceca2b
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Propofol.json
+  uploadId: 728075

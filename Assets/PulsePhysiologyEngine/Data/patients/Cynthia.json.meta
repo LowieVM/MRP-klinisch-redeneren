@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 39c91bd01ae0b184f8b1be7cbabe6c46
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/patients/Cynthia.json
+  uploadId: 728075

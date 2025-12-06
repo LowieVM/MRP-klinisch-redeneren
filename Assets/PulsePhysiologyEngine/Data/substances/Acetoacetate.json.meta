@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3248ca2e402bc5b4c8fd2ae102f5aa18
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Acetoacetate.json
+  uploadId: 728075

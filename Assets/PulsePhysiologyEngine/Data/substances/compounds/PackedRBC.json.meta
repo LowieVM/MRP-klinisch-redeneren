@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bf03b18b9d642684b8072e8f56297b91
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/compounds/PackedRBC.json
+  uploadId: 728075

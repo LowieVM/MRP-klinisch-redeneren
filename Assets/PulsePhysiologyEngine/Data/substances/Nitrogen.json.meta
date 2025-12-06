@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8addf3fc4564fa741bce4661c37873a5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Nitrogen.json
+  uploadId: 728075

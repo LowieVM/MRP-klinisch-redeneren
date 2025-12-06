@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 10b365a6a66ba42419aa9eba0e7d67b4
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Urea.json
+  uploadId: 728075

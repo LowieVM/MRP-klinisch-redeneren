@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bb0f193eac2758445b50790b847c046b
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Prednisone.json
+  uploadId: 728075

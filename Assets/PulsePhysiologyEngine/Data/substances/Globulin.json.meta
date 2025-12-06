@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f6d390e5aed82741a7dd3d7e6977846
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Globulin.json
+  uploadId: 728075

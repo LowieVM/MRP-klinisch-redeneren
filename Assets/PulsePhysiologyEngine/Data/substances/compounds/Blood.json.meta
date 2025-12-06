@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e7b6383ee72cd95438553c05b241b8eb
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/compounds/Blood.json
+  uploadId: 728075

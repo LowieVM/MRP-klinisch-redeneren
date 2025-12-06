@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a54098b938365e14a954dbec821bae6b
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/environments/CheyenneMountainFireFighter.json
+  uploadId: 728075

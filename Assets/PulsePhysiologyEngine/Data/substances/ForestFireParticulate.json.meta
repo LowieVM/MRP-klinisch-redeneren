@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 904aea359ca59b44f90098915054a950
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/ForestFireParticulate.json
+  uploadId: 728075

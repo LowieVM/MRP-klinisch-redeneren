@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e02b1dbd2cb701b4684c81eaac4f9fa9
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/scenarios/CombatMultitrauma.json
+  uploadId: 728075

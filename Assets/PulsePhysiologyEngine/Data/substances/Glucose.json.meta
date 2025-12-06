@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 05a59fd6108edff42b2fc8972e5d1319
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Glucose.json
+  uploadId: 728075

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a01a5fc0a618d8b4e88064fa811e0117
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/nutrition/Water.json
+  uploadId: 728075

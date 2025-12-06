@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6352193ed0d974f4690abc1400f60b02
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/states/StandardFemale@0s.json
+  uploadId: 728075

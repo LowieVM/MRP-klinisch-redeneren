@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b99f426dae9b084ba661705a9512dcf
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/environments/AnchorageDecember.json
+  uploadId: 728075

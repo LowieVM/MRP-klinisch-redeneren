@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a28b107179e98de469274e57ad0147d8
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/config/DynamicStabilization.json
+  uploadId: 728075

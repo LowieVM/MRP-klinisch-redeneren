@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 25bbfa4eab56ca24d9a4766e6b010532
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/nutrition/Standard.json
+  uploadId: 728075

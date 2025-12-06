@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: db6e94f32cbc10140b268284c78922ad
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Lorazepam.json
+  uploadId: 728075

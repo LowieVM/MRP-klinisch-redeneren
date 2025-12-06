@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 12320af7d0caff246960f5c765a61323
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/CarbonMonoxide.json
+  uploadId: 728075

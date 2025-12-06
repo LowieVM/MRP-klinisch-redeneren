@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d4452704bc92394b8b7c7912fe9045d
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/substances/Phenylephrine.json
+  uploadId: 728075

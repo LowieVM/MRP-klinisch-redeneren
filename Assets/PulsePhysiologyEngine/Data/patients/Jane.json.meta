@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5a3ec232602187a4b95a4df125c692ba
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 139773
+  packageName: Pulse Physiology Engine
+  packageVersion: 4.3.1
+  assetPath: Assets/PulsePhysiologyEngine/Data/patients/Jane.json
+  uploadId: 728075
