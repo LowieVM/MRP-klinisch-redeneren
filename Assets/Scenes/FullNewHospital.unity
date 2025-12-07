@@ -185,6 +185,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40e1132d3078d234ba46ddb841ebc8ad, type: 3}
   m_PrefabInstance: {fileID: 12094363}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &19654806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1001 &21342196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1132,6 +1159,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5944789252348077704, guid: 69680b8c18a394c46b763fadcbf6f416, type: 3}
   m_PrefabInstance: {fileID: 1542562166}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &621658046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1001 &658745773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,6 +1616,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+--- !u!114 &833465352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9017177833898085104, guid: 074825d580a09bf4da8638d523322100, type: 3}
+  m_PrefabInstance: {fileID: 658745773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784abafd9ac83194a9e9aaa5f1c25ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &868200993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3236,33 +3301,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40e1132d3078d234ba46ddb841ebc8ad, type: 3}
   m_PrefabInstance: {fileID: 1225895080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1242509800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!114 &1257749325 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9033155326084245647, guid: da2904e29473f3c4a834d882933ece23, type: 3}
@@ -4293,8 +4331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -1.277, y: 0}
+  m_SizeDelta: {x: 899.8156, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483552043
 MonoBehaviour:
@@ -4325,8 +4363,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4350,7 +4388,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4878,7 +4916,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579878087}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -5153,60 +5191,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1733771836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
---- !u!114 &1745601429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1001 &1773162983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5390,7 +5374,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationPanel: {fileID: 2133187794}
   conversationText: {fileID: 1483552043}
-  conversationMessage: Hello, welcome to the game!
+  pulseEngineDriver: {fileID: 833465352}
+  conversationTemplates:
+  - Hi, I'm {name}. I'm feeling a bit off today.
+  - Hello! My name is {name}, I'm {age} years old.
+  - Nice to meet you. I'm {name}, and I weigh about {weight}.
+  - Hey there! {name} here. I'm {height} tall.
+  - Greetings! I'm {name}, a {age} year old {sex}.
+  - Oh hello! My name is {name}. How can I help you?
+  - Hi! I'm {name}. This place is interesting, isn't it?
+  - Welcome! I'm {name}, {age} years young!
+  - Good to see you! {name}'s the name.
+  - Hello friend! You can call me {name}.
+  - I don't feel so good...
+  - Please help me!
   lettersPerSecond: 40
   closeOnSecondInteraction: 1
 --- !u!114 &1805669503
@@ -6374,6 +6371,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40e1132d3078d234ba46ddb841ebc8ad, type: 3}
   m_PrefabInstance: {fileID: 2041755270}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2058092707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1001 &2076952458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6542,7 +6566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 1920, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133187796
