@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
-using System.Collections;
 using Pulse.Unity;
+using static XRConversationTrigger;
 
 public class VRClipboardToggle : MonoBehaviour
 {
     [Header("Clipboard Settings")]
     public Transform clipboardTransform;
-    public Vector3 hiddenPosition = new Vector3(0, -500, 0); 
-    public Vector3 visiblePosition = new Vector3(0, -100, 0); 
+    public Vector3 hiddenPosition = new Vector3(0, -500, 0);
+    public Vector3 visiblePosition = new Vector3(0, -100, 0);
     public float slideSpeed = 3f;
 
     [Header("UI Elements")]
@@ -20,67 +20,10 @@ public class VRClipboardToggle : MonoBehaviour
     public PulseEngineDriver pulseEngineDriver;
 
     [Header("Controller Input")]
-    public XRNode controllerHand = XRNode.LeftHand;
-    public InputHelpers.Button toggleButton = InputHelpers.Button.SecondaryButton;
+    public InputActionReference toggleAction;
 
     private bool isVisible = false;
     private Vector3 targetPosition;
-    private bool buttonWasPressed = false;
-
-    [System.Serializable]
-    public class NPCData
-    {
-        public CurrentPatient CurrentPatient;
-    }
-
-    [System.Serializable]
-    public class CurrentPatient
-    {
-        public string Name;
-        public string Sex;
-        public AgeData Age;
-        public WeightData Weight;
-        public HeightData Height;
-    }
-
-    [System.Serializable]
-    public class AgeData
-    {
-        public ScalarTime ScalarTime;
-    }
-
-    [System.Serializable]
-    public class WeightData
-    {
-        public ScalarMass ScalarMass;
-    }
-
-    [System.Serializable]
-    public class HeightData
-    {
-        public ScalarLength ScalarLength;
-    }
-
-    [System.Serializable]
-    public class ScalarTime
-    {
-        public float Value;
-        public string Unit;
-    }
-
-    [System.Serializable]
-    public class ScalarMass
-    {
-        public float Value;
-        public string Unit;
-    }
-
-    [System.Serializable]
-    public class ScalarLength
-    {
-        public float Value;
-        public string Unit;
-    }
 
     private void Start()
     {
@@ -95,10 +38,26 @@ public class VRClipboardToggle : MonoBehaviour
         LoadNPCData();
     }
 
+    private void OnEnable()
+    {
+        if (toggleAction != null)
+        {
+            toggleAction.action.Enable();
+            toggleAction.action.performed += OnTogglePressed;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (toggleAction != null)
+        {
+            toggleAction.action.performed -= OnTogglePressed;
+            toggleAction.action.Disable();
+        }
+    }
+
     private void Update()
     {
-        CheckToggleInput();
-
         clipboardTransform.localPosition = Vector3.Lerp(
             clipboardTransform.localPosition,
             targetPosition,
@@ -106,22 +65,9 @@ public class VRClipboardToggle : MonoBehaviour
         );
     }
 
-    private void CheckToggleInput()
+    private void OnTogglePressed(InputAction.CallbackContext context)
     {
-        InputDevice device = InputDevices.GetDeviceAtXRNode(controllerHand);
-
-        if (device.isValid)
-        {
-            bool buttonPressed;
-            if (device.TryGetFeatureValue(new InputFeatureUsage<bool>(toggleButton.ToString()), out buttonPressed))
-            {
-                if (buttonPressed && !buttonWasPressed)
-                {
-                    ToggleClipboard();
-                }
-                buttonWasPressed = buttonPressed;
-            }
-        }
+        ToggleClipboard();
     }
 
     private void ToggleClipboard()
@@ -175,7 +121,6 @@ public class VRClipboardToggle : MonoBehaviour
             }
         }
 
-        // Fallback
         if (npcNameText != null)
         {
             npcNameText.text = "Unknown Patient";
