@@ -181,7 +181,7 @@ Transform:
   m_GameObject: {fileID: 16975592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.457079, y: -8.744994, z: 18.048826}
+  m_LocalPosition: {x: -19.457079, y: -8.744994, z: 36.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1498,7 +1498,7 @@ Transform:
   m_GameObject: {fileID: 785750116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.833, y: -0.33, z: 23.14}
+  m_LocalPosition: {x: -7.64, y: -0.03, z: 23.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2514,6 +2514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallbackDelay: 0.15
   introVideoPlayer: {fileID: 16975593}
+  canvas: {fileID: 442453564}
 --- !u!1 &2080019817
 GameObject:
   m_ObjectHideFlags: 0

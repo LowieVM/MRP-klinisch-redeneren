@@ -11,6 +11,8 @@ public class MenuController : MonoBehaviour
     [Tooltip("Optional VideoPlayer that will play before the target scene loads.")]
     [SerializeField] private VideoPlayer introVideoPlayer;
 
+    public Canvas canvas; 
+
     // Prevent double-starts
     private bool isLoading = false;
 
@@ -50,11 +52,21 @@ public class MenuController : MonoBehaviour
         if (isLoading)
             yield break;
 
+        if (canvas != null)
+        {
+            canvas.enabled = false;
+        }
+
         isLoading = true;
 
         // No scene name -> do nothing and reset flag
         if (string.IsNullOrEmpty(sceneName))
         {
+            if (canvas != null)
+            {
+                canvas.enabled = true;
+            }
+
             isLoading = false;
             yield break;
         }

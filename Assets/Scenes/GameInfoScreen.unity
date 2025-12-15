@@ -469,7 +469,7 @@ VideoPlayer:
   m_AspectRatio: 3
   m_DataSource: 0
   m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 2
+  m_PlaybackSpeed: 2.5
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -2874,6 +2874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallbackDelay: 0.15
   introVideoPlayer: {fileID: 183997439}
+  canvas: {fileID: 1735218974}
 --- !u!1 &1296094756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4387,6 +4388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallbackDelay: 0.15
   introVideoPlayer: {fileID: 183997439}
+  canvas: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
