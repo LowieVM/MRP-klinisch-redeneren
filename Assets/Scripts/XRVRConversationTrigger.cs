@@ -15,19 +15,92 @@ public class XRConversationTrigger : MonoBehaviour
     [Header("NPC Data")]
     public PulseEngineDriver pulseEngineDriver;
 
-    [Header("Conversation Templates")]
-    public List<string> conversationTemplates = new List<string>
+    [Header("Patient State")]
+    public PatientStateManager patientStateManager;
+
+    [Header("Critical State - Truthful")]
+    public List<string> criticalTruthfulConversations = new List<string>
     {
-        "Hi, I'm {name}. I'm feeling a bit off today.",
-        "Hello! My name is {name}, I'm {age} years old.",
-        "Nice to meet you. I'm {name}, and I weigh about {weight}.",
-        "Hey there! {name} here. I'm {height} tall.",
-        "Greetings! I'm {name}, a {age} year old {sex}.",
-        "Oh hello! My name is {name}. How can I help you?",
-        "Hi! I'm {name}. This place is interesting, isn't it?",
-        "Welcome! I'm {name}, {age} years young!",
-        "Good to see you! {name}'s the name.",
-        "Hello friend! You can call me {name}."
+        "I'm {name}... the pain is unbearable, please help me!",
+        "My chest really hurts... I'm {age} and I've never felt like this.",
+        "Please... I'm {name}, I can barely breathe...",
+        "Something's very wrong... I'm in severe pain.",
+        "I need help immediately! The pain is too much!"
+    };
+
+    [Header("Critical State - Lying")]
+    public List<string> criticalLyingConversations = new List<string>
+    {
+        "I'm fine, really... just a little dizzy. I'm {name}.",
+        "No need to worry about me, I just need to sit down.",
+        "It's nothing serious... I'm {name}, I'll be okay.",
+        "Just a headache, nothing more. I'm sure it'll pass.",
+        "I feel completely fine, no problems at all."
+    };
+
+    [Header("Unstable State - Truthful")]
+    public List<string> unstableTruthfulConversations = new List<string>
+    {
+        "I'm {name}... still hurting but the medicine is helping a bit.",
+        "The pain is still there... but not as bad as before.",
+        "I'm {name}, {age} years old. I'm starting to feel a little better.",
+        "Thank you for helping... I still feel weak though.",
+        "It's improving slowly... but I'm not out of the woods yet."
+    };
+
+    [Header("Unstable State - Lying")]
+    public List<string> unstableLyingConversations = new List<string>
+    {
+        "I'm totally fine now! {name} here, feeling great!",
+        "All better! I'm {name}, no more pain at all.",
+        "I don't need any more treatment, I'm completely recovered.",
+        "The pain is completely gone, I swear.",
+        "I'm {name} and I feel perfect now, thanks!"
+    };
+
+    [Header("Improving State - Truthful")]
+    public List<string> improvingTruthfulConversations = new List<string>
+    {
+        "Hi! I'm {name}. Feeling much better now, thank you.",
+        "I'm {name}, the treatment really helped. Almost back to normal.",
+        "Much better! I'm {age} and feeling like myself again.",
+        "The pain is mostly gone now. I'm {name}, thanks for your care.",
+        "I'm improving steadily. {name}'s the name, grateful for your help."
+    };
+
+    [Header("Improving State - Lying")]
+    public List<string> improvingLyingConversations = new List<string>
+    {
+        "I'm {name}... actually still feeling some pain.",
+        "Well... I'm better but not as good as I'm saying. I'm {name}.",
+        "The pain isn't completely gone yet, if I'm being honest.",
+        "I'm {name}. Still a bit uncomfortable but didn't want to worry you.",
+        "Trying to be brave, but I still feel some symptoms."
+    };
+
+    [Header("Stable State - Truthful")]
+    public List<string> stableTruthfulConversations = new List<string>
+    {
+        "Hi, I'm {name}. I'm feeling completely healthy now!",
+        "Hello! My name is {name}, I'm {age} years old and fully recovered.",
+        "Nice to meet you. I'm {name}, feeling great thanks to you!",
+        "Hey there! {name} here. Back to normal, thank you so much!",
+        "Greetings! I'm {name}, a {age} year old {sex}, and I feel wonderful!",
+        "Oh hello! My name is {name}. I'm completely better now!",
+        "Hi! I'm {name}. Everything is perfect, no more problems!",
+        "Welcome! I'm {name}, {age} years young and healthy!",
+        "Good to see you! {name}'s the name. Feeling fantastic!",
+        "Hello friend! You can call me {name}. I'm all better!"
+    };
+
+    [Header("Stable State - Lying")]
+    public List<string> stableLyingConversations = new List<string>
+    {
+        "I'm {name}... maybe I pushed myself too hard, feeling a bit off.",
+        "Hi, I'm {name}. Probably nothing, but I'm feeling slightly unwell again.",
+        "I'm {name}. Everything's fine... mostly. Just a small concern.",
+        "Hello! {name} here. I might have overdone it, feeling tired.",
+        "I'm completely fine! Well... maybe a tiny bit of discomfort."
     };
 
     [Header("Settings")]
@@ -38,6 +111,8 @@ public class XRConversationTrigger : MonoBehaviour
     private XRSimpleInteractable interactable;
     private bool isConversationActive = false;
     private NPCData cachedNPCData;
+    private bool lastResponseWasTruthful;
+    private PatientState lastKnownState;
 
     [System.Serializable]
     public class NPCData
@@ -113,6 +188,19 @@ public class XRConversationTrigger : MonoBehaviour
         }
 
         LoadNPCData();
+
+        // Subscribe to patient state events if manager exists
+        if (patientStateManager != null)
+        {
+            patientStateManager.OnStateChanged += HandleStateChanged;
+            patientStateManager.OnTruthfulnessChecked += HandleTruthfulnessChecked;
+            patientStateManager.OnPatientFullyHealed += HandlePatientFullyHealed;
+            lastKnownState = patientStateManager.GetCurrentState();
+        }
+        else
+        {
+            Debug.LogWarning("PatientStateManager not assigned! Conversations will use default templates.");
+        }
     }
 
     private void LoadNPCData()
@@ -180,7 +268,38 @@ public class XRConversationTrigger : MonoBehaviour
         {
             interactable.selectEntered.RemoveListener(OnInteract);
         }
+
+        if (patientStateManager != null)
+        {
+            patientStateManager.OnStateChanged -= HandleStateChanged;
+            patientStateManager.OnTruthfulnessChecked -= HandleTruthfulnessChecked;
+            patientStateManager.OnPatientFullyHealed -= HandlePatientFullyHealed;
+        }
     }
+
+    #region Event Handlers
+
+    private void HandleStateChanged(PatientState newState)
+    {
+        lastKnownState = newState;
+        Debug.Log($"[Conversation] Patient state changed to: {newState}");
+
+        // Optional: Show a visual indicator or update UI
+    }
+
+    private void HandleTruthfulnessChecked(bool isTruthful)
+    {
+        lastResponseWasTruthful = isTruthful;
+        Debug.Log($"[Conversation] Patient is being {(isTruthful ? "TRUTHFUL" : "DECEPTIVE")}");
+    }
+
+    private void HandlePatientFullyHealed()
+    {
+        Debug.Log("[Conversation] Patient has been fully healed!");
+        // Optional: Trigger celebration animation or dialogue
+    }
+
+    #endregion
 
     private void OnInteract(UnityEngine.XR.Interaction.Toolkit.SelectEnterEventArgs args)
     {
@@ -223,13 +342,40 @@ public class XRConversationTrigger : MonoBehaviour
 
     private string GetRandomConversationMessage()
     {
-        if (conversationTemplates.Count == 0)
+        PatientState currentState = patientStateManager != null
+            ? patientStateManager.GetCurrentState()
+            : PatientState.Stable;
+
+        bool isTruthful = patientStateManager != null
+            ? patientStateManager.IsTruthful()
+            : true;
+
+        List<string> templates = GetConversationTemplatesForState(currentState, isTruthful);
+
+        if (templates.Count == 0)
         {
-            return "Hello there!";
+            Debug.LogWarning($"No conversation templates for {currentState} + {(isTruthful ? "Truthful" : "Lying")}");
+            return "...";
         }
 
-        string template = conversationTemplates[Random.Range(0, conversationTemplates.Count)];
+        string template = templates[Random.Range(0, templates.Count)];
+        return ReplaceTemplatePlaceholders(template);
+    }
 
+    private List<string> GetConversationTemplatesForState(PatientState state, bool isTruthful)
+    {
+        return state switch
+        {
+            PatientState.Critical => isTruthful ? criticalTruthfulConversations : criticalLyingConversations,
+            PatientState.Unstable => isTruthful ? unstableTruthfulConversations : unstableLyingConversations,
+            PatientState.Improving => isTruthful ? improvingTruthfulConversations : improvingLyingConversations,
+            PatientState.Stable => isTruthful ? stableTruthfulConversations : stableLyingConversations,
+            _ => stableTruthfulConversations
+        };
+    }
+
+    private string ReplaceTemplatePlaceholders(string template)
+    {
         if (cachedNPCData != null && cachedNPCData.CurrentPatient != null)
         {
             var patient = cachedNPCData.CurrentPatient;
@@ -241,11 +387,19 @@ public class XRConversationTrigger : MonoBehaviour
             {
                 template = template.Replace("{age}", Mathf.RoundToInt(patient.Age.ScalarTime.Value).ToString());
             }
+            else
+            {
+                template = template.Replace("{age}", "??");
+            }
 
             if (patient.Weight != null && patient.Weight.ScalarMass != null)
             {
                 template = template.Replace("{weight}",
                     Mathf.RoundToInt(patient.Weight.ScalarMass.Value) + " " + patient.Weight.ScalarMass.Unit);
+            }
+            else
+            {
+                template = template.Replace("{weight}", "unknown");
             }
 
             if (patient.Height != null && patient.Height.ScalarLength != null)
@@ -253,10 +407,14 @@ public class XRConversationTrigger : MonoBehaviour
                 template = template.Replace("{height}",
                     Mathf.RoundToInt(patient.Height.ScalarLength.Value) + " " + patient.Height.ScalarLength.Unit);
             }
+            else
+            {
+                template = template.Replace("{height}", "unknown");
+            }
         }
         else
         {
-            template = template.Replace("{name}", "the NPC");
+            template = template.Replace("{name}", "the patient");
             template = template.Replace("{age}", "??");
             template = template.Replace("{sex}", "unknown");
             template = template.Replace("{weight}", "unknown");
@@ -288,6 +446,25 @@ public class XRConversationTrigger : MonoBehaviour
         {
             conversationText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
+        }
+    }
+
+    // voor debugging
+    public bool WasLastResponseTruthful()
+    {
+        return lastResponseWasTruthful;
+    }
+
+    public PatientState GetCurrentPatientState()
+    {
+        return lastKnownState;
+    }
+
+    public void TriggerConversation()
+    {
+        if (!isConversationActive)
+        {
+            StartConversation();
         }
     }
 }

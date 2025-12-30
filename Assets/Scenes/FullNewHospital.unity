@@ -337,33 +337,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7433234277619339544, guid: da2904e29473f3c4a834d882933ece23, type: 3}
   m_PrefabInstance: {fileID: 1885387942}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &183694046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1 &347678967
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,33 +409,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347678967}
   m_CullTransparentMesh: 1
---- !u!114 &374820936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1 &395745208 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2267735687786850456, guid: 69680b8c18a394c46b763fadcbf6f416, type: 3}
@@ -489,6 +435,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.009995384, y: 0.020014714, z: 0.00056519103}
   m_Center: {x: -0.0049807485, y: 0.010002837, z: 0.0000000055879354}
+--- !u!114 &408868432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1 &444055066
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,33 +727,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &518969580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1001 &530485448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1392,33 +1338,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5944789252348077704, guid: 69680b8c18a394c46b763fadcbf6f416, type: 3}
   m_PrefabInstance: {fileID: 1542562166}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &638264135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1001 &658745773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1885,6 +1804,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40e1132d3078d234ba46ddb841ebc8ad, type: 3}
   m_PrefabInstance: {fileID: 868200993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &900626716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1001 &917633088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3547,39 +3493,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4675573491783898455, guid: b737903a0cefa1e4aa4c22e91c6ec5dd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1805669503}
+    - targetCorrespondingSourceObject: {fileID: 4675573491783898455, guid: b737903a0cefa1e4aa4c22e91c6ec5dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1805669504}
   m_SourcePrefab: {fileID: 100100000, guid: b737903a0cefa1e4aa4c22e91c6ec5dd, type: 3}
 --- !u!1 &1274803471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4675573491783898455, guid: b737903a0cefa1e4aa4c22e91c6ec5dd, type: 3}
   m_PrefabInstance: {fileID: 1274803470}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1277071084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1001 &1283572849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4893,33 +4815,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1647538900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStampList:
-    list: []
-  valuesTable:
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
-  - list: []
 --- !u!1001 &1688131761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5353,19 +5248,60 @@ MonoBehaviour:
   conversationPanel: {fileID: 2037873221}
   conversationText: {fileID: 1161064422}
   pulseEngineDriver: {fileID: 833465352}
-  conversationTemplates:
-  - Hi, I'm {name}. I'm feeling a bit off today.
-  - Hello! My name is {name}, I'm {age} years old.
-  - Nice to meet you. I'm {name}, and I weigh about {weight}.
-  - Hey there! {name} here. I'm {height} tall.
-  - Greetings! I'm {name}, a {age} year old {sex}.
-  - Oh hello! My name is {name}. How can I help you?
-  - Hi! I'm {name}. This place is interesting, isn't it?
-  - Welcome! I'm {name}, {age} years young!
-  - Good to see you! {name}'s the name.
-  - Hello friend! You can call me {name}.
-  - I don't feel so good...
-  - Please help me!
+  patientStateManager: {fileID: 1805669504}
+  criticalTruthfulConversations:
+  - I'm {name}... the pain is unbearable, please help me!
+  - My chest really hurts... I'm {age} and I've never felt like this.
+  - Please... I'm {name}, I can barely breathe...
+  - Something's very wrong... I'm in severe pain.
+  - I need help immediately! The pain is too much!
+  criticalLyingConversations:
+  - I'm fine, really... just a little dizzy. I'm {name}.
+  - No need to worry about me, I just need to sit down.
+  - It's nothing serious... I'm {name}, I'll be okay.
+  - Just a headache, nothing more. I'm sure it'll pass.
+  - I feel completely fine, no problems at all.
+  unstableTruthfulConversations:
+  - I'm {name}... still hurting but the medicine is helping a bit.
+  - The pain is still there... but not as bad as before.
+  - I'm {name}, {age} years old. I'm starting to feel a little better.
+  - Thank you for helping... I still feel weak though.
+  - It's improving slowly... but I'm not out of the woods yet.
+  unstableLyingConversations:
+  - I'm totally fine now! {name} here, feeling great!
+  - All better! I'm {name}, no more pain at all.
+  - I don't need any more treatment, I'm completely recovered.
+  - The pain is completely gone, I swear.
+  - I'm {name} and I feel perfect now, thanks!
+  improvingTruthfulConversations:
+  - Hi! I'm {name}. Feeling much better now, thank you.
+  - I'm {name}, the treatment really helped. Almost back to normal.
+  - Much better! I'm {age} and feeling like myself again.
+  - The pain is mostly gone now. I'm {name}, thanks for your care.
+  - I'm improving steadily. {name}'s the name, grateful for your help.
+  improvingLyingConversations:
+  - I'm {name}... actually still feeling some pain.
+  - Well... I'm better but not as good as I'm saying. I'm {name}.
+  - The pain isn't completely gone yet, if I'm being honest.
+  - I'm {name}. Still a bit uncomfortable but didn't want to worry you.
+  - Trying to be brave, but I still feel some symptoms.
+  stableTruthfulConversations:
+  - Hi, I'm {name}. I'm feeling completely healthy now!
+  - Hello! My name is {name}, I'm {age} years old and fully recovered.
+  - Nice to meet you. I'm {name}, feeling great thanks to you!
+  - Hey there! {name} here. Back to normal, thank you so much!
+  - Greetings! I'm {name}, a {age} year old {sex}, and I feel wonderful!
+  - Oh hello! My name is {name}. I'm completely better now!
+  - Hi! I'm {name}. Everything is perfect, no more problems!
+  - Welcome! I'm {name}, {age} years young and healthy!
+  - Good to see you! {name}'s the name. Feeling fantastic!
+  - Hello friend! You can call me {name}. I'm all better!
+  stableLyingConversations:
+  - I'm {name}... maybe I pushed myself too hard, feeling a bit off.
+  - Hi, I'm {name}. Probably nothing, but I'm feeling slightly unwell again.
+  - I'm {name}. Everything's fine... mostly. Just a small concern.
+  - Hello! {name} here. I might have overdone it, feeling tired.
+  - I'm completely fine! Well... maybe a tiny bit of discomfort.
   lettersPerSecond: 40
   closeOnSecondInteraction: 1
 --- !u!114 &1805669503
@@ -5440,6 +5376,27 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+--- !u!114 &1805669504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274803471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363b346648292784d835441d026a59cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  currentStage: 0
+  totalStages: 4
+  autoProgressStages: 0
+  autoProgressDelay: 5
+  lyingChanceCritical: 0.8
+  lyingChanceUnstable: 0.6
+  lyingChanceImproving: 0.4
+  lyingChanceStable: 0.3
 --- !u!1001 &1826166298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6716,6 +6673,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40e1132d3078d234ba46ddb841ebc8ad, type: 3}
   m_PrefabInstance: {fileID: 2090615258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2144874206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c300108eb8c4b144a3c57c88e71fca4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStampList:
+    list: []
+  valuesTable:
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
+  - list: []
 --- !u!1001 &3245199805648606015
 PrefabInstance:
   m_ObjectHideFlags: 0
