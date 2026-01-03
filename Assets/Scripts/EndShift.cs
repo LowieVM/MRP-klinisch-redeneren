@@ -25,7 +25,7 @@ public class EndShift : MonoBehaviour
 
     private readonly string _sceneName = "FullOldHospital";
     private readonly string _firstLevelSceneName = "FullOldHospital";
-    private readonly string _endSceneName = "GameOverScreen";
+    private readonly string _endSceneName = "GameEndScreen";
     private readonly string _requiredTag = "Player";
 
     private bool _activated = false;

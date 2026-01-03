@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class VRDoor : MonoBehaviour
 {
@@ -23,6 +24,13 @@ public class VRDoor : MonoBehaviour
 
     [Tooltip("If true this door will trigger the TimerController when opened. Leave false for doors that should not trigger the timer.")]
     public bool triggerTimerOnOpen = false;
+
+    [Header("Audio patient")]
+    [Tooltip("AudioSource used to play the patient hurt sound.")]
+    public AudioSource hurtSource;
+
+    // Coroutine handle for looping patient hurt sound
+    private Coroutine hurtCoroutine = null;
 
     // Tracks whether we've already started the timer after an open
     // starts as false and is set true when the door finishes opening
@@ -92,6 +100,7 @@ public class VRDoor : MonoBehaviour
             // Only trigger if this door is configured to trigger the timer.
             if (isOpen && !timerTriggered && triggerTimerOnOpen)
             {
+                PlayPatientHurtSound();
                 timerTriggered = true;
                 if (timerController != null)
                 {
@@ -104,6 +113,12 @@ public class VRDoor : MonoBehaviour
                     Debug.LogWarning("[VRDoor] TimerController reference is not set. Assign it in the Inspector to start the timer when the door opens.");
                 }
             }
+            else if (!isOpen)
+            {
+                // stop hurt sound loop when door is closed
+                StopPatientHurtSound();
+            }
+            
         }
     }
 
@@ -119,5 +134,56 @@ public class VRDoor : MonoBehaviour
         // Play the AudioSource's clip once without altering AudioSource.clip or other settings
         float volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
         audioSource.PlayOneShot(audioSource.clip, volume);
+    }
+
+    private void PlayPatientHurtSound()
+    {
+        if (hurtSource == null)
+        {
+            Debug.LogWarning("[VRDoor] hurtSource is not assigned. Cannot play patient hurt sound.");
+            return;
+        }
+
+        if (hurtSource.clip == null)
+        {
+            Debug.LogWarning("[VRDoor] hurtSource has no clip assigned.");
+            return;
+        }
+
+        // prevent multiple coroutines
+        if (hurtCoroutine != null)
+            return;
+
+        hurtCoroutine = StartCoroutine(HurtLoop());
+    }
+
+    private IEnumerator HurtLoop()
+    {
+        // Play the hurt sound every 2 seconds until stopped
+        while (true)
+        {
+            float volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
+            // Ensure only one instance of the hurt sound is playing at a time.
+            // Set the source volume and restart the clip so it does not overlap.
+            hurtSource.volume = volume;
+            if (hurtSource.isPlaying)
+                hurtSource.Stop();
+            hurtSource.Play();
+            yield return new WaitForSeconds(2f);
+        }
+    }
+
+    private void StopPatientHurtSound()
+    {
+        if (hurtCoroutine != null)
+        {
+            StopCoroutine(hurtCoroutine);
+            hurtCoroutine = null;
+        }
+
+        if (hurtSource != null)
+        {
+            hurtSource.Stop();
+        }
     }
 }
