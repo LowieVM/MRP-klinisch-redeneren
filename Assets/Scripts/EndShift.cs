@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +21,10 @@ public class EndShift : MonoBehaviour
     public float fadeDuration = 0.75f;
     [Tooltip("Color to fade to (white for a white-out)")]
     public Color fadeColor = Color.white;
+
+    [Header("Timer")]
+    [Tooltip("The timer text to be saved in the playerprefs")]
+    public TextMeshProUGUI timer;
 
     [Header("Debug")]
     public bool debugLogging = true;
@@ -59,6 +65,20 @@ public class EndShift : MonoBehaviour
         if (_activated && singleUse) return;
 
         if (activator == null) return;
+
+        string[] parts = timer.text.Split(':');
+
+        int hours = int.Parse(parts[0]);
+        int minutes = int.Parse(parts[1]);
+        int seconds = int.Parse(parts[2]);
+
+        int totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+        int speedScore = PlayerPrefs.GetInt("SpeedScore");
+
+        int totalScore = speedScore += totalSeconds;
+
+        PlayerPrefs.SetInt("SpeedScore", totalScore);
 
         // Accept if tag matches (if set) OR if activator (or parent) has a CharacterController (common in XR rigs)
         bool tagOk = string.IsNullOrEmpty(_requiredTag) || activator.CompareTag(_requiredTag);
@@ -137,6 +157,9 @@ public class EndShift : MonoBehaviour
 
         // Allow one frame so the final color is rendered before scene change
         yield return null;
+
+
+        
 
         // Load the target scene
         SceneManager.LoadScene(targetScene);

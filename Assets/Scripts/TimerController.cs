@@ -126,44 +126,7 @@ public class TimerController : MonoBehaviour
         {
             elapsed = 0f;
             running = false;
-        }
-
-        // 1) Try GameObject named "TimerText"
-        var go = GameObject.Find("TimerText");
-        if (go != null)
-        {
-            var tmp = go.GetComponent<TextMeshProUGUI>();
-            if (tmp != null)
-            {
-                AttachText(tmp);
-                return;
-            }
-        }
-
-        // 2) Try tag "TimerText" (create this tag and assign to your timer text in the scene)
-        try
-        {
-            var tagged = GameObject.FindWithTag("TimerText");
-            if (tagged != null)
-            {
-                var tmp = tagged.GetComponent<TextMeshProUGUI>();
-                if (tmp != null)
-                {
-                    AttachText(tmp);
-                    return;
-                }
-            }
-        }
-        catch (UnityException)
-        {
-            // Tag not created — ignore
-        }
-
-        // 3) Fallback: first TMP in scene
-        var all = FindObjectsOfType<TextMeshProUGUI>();
-        if (all != null && all.Length > 0)
-        {
-            AttachText(all[0]);
+            PlayerPrefs.SetInt("SpeedScore", 0);
         }
     }
 
