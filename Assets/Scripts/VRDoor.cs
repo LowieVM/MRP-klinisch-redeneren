@@ -113,11 +113,6 @@ public class VRDoor : MonoBehaviour
                     Debug.LogWarning("[VRDoor] TimerController reference is not set. Assign it in the Inspector to start the timer when the door opens.");
                 }
             }
-            else if (!isOpen)
-            {
-                // stop hurt sound loop when door is closed
-                StopPatientHurtSound();
-            }
             
         }
     }
@@ -150,9 +145,32 @@ public class VRDoor : MonoBehaviour
             return;
         }
 
+        // Configure source to ensure the clip is audible (2D, not muted) and use SFX volume
+        try
+        {
+            hurtSource.playOnAwake = false;
+            hurtSource.mute = false;
+            hurtSource.loop = false;
+            // use 2D playback so spatial settings don't make it silent if far away
+            hurtSource.spatialBlend = 0f;
+            hurtSource.volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
+        }
+        catch
+        {
+            // ignore if any property isn't available for some reason
+        }
+
+        Debug.Log($"[VRDoor] PlayPatientHurtSound called. hurtSource assigned: {hurtSource != null}, clip: {(hurtSource.clip != null ? hurtSource.clip.name : "null")}, volume: {hurtSource.volume}");
+
         // prevent multiple coroutines
         if (hurtCoroutine != null)
             return;
+
+        // Play immediately once to verify audibility, the loop will continue playing as needed
+        if (!hurtSource.isPlaying)
+        {
+            hurtSource.Play();
+        }
 
         hurtCoroutine = StartCoroutine(HurtLoop());
     }
@@ -163,12 +181,10 @@ public class VRDoor : MonoBehaviour
         while (true)
         {
             float volume = SoundManager.Instance != null ? SoundManager.Instance.SfxVolume : 1f;
-            // Ensure only one instance of the hurt sound is playing at a time.
-            // Set the source volume and restart the clip so it does not overlap.
             hurtSource.volume = volume;
-            if (hurtSource.isPlaying)
-                hurtSource.Stop();
-            hurtSource.Play();
+            // Only start playing if not already playing to avoid overlapping or choppy restarts
+            if (!hurtSource.isPlaying)
+                hurtSource.Play();
             yield return new WaitForSeconds(2f);
         }
     }
@@ -183,7 +199,9 @@ public class VRDoor : MonoBehaviour
 
         if (hurtSource != null)
         {
-            hurtSource.Stop();
+            if (hurtSource.isPlaying)
+                hurtSource.Stop();
         }
+        Debug.Log("[VRDoor] StopPatientHurtSound called");
     }
 }

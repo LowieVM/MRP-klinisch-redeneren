@@ -338,6 +338,10 @@ MonoBehaviour:
   doorOpenAngle: 90
   openSpeed: 2
   audioSource: {fileID: 6935770566354832401}
+  timerController: {fileID: 0}
+  timerSection: {fileID: 0}
+  triggerTimerOnOpen: 0
+  hurtSource: {fileID: 0}
 --- !u!65 &2395350605889798763
 BoxCollider:
   m_ObjectHideFlags: 0
