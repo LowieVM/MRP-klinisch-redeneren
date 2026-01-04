@@ -20,88 +20,102 @@ public class XRConversationTrigger : MonoBehaviour
 
     [Header("Critical State - Truthful")]
     public List<string> criticalTruthfulConversations = new List<string>
-    {
-        "I'm {name}... the pain is unbearable, please help me!",
-        "My chest really hurts... I'm {age} and I've never felt like this.",
-        "Please... I'm {name}, I can barely breathe...",
-        "Something's very wrong... I'm in severe pain.",
-        "I need help immediately! The pain is too much!"
-    };
+{
+    "Sweetheart... it's Mom... the pain is so bad, I need your help!",
+    "Honey, I'm scared... I've never felt pain like this before.",
+    "{name} here... your mother. Please help me, I can barely breathe...",
+    "My dear, something's very wrong... I'm in so much pain.",
+    "I need you right now, sweetie... the pain is unbearable!",
+    "Baby girl, I'm trying to be brave but... this really hurts.",
+    "It's your mom... I hate to worry you but I really need help."
+};
 
     [Header("Critical State - Lying")]
     public List<string> criticalLyingConversations = new List<string>
-    {
-        "I'm fine, really... just a little dizzy. I'm {name}.",
-        "No need to worry about me, I just need to sit down.",
-        "It's nothing serious... I'm {name}, I'll be okay.",
-        "Just a headache, nothing more. I'm sure it'll pass.",
-        "I feel completely fine, no problems at all."
-    };
+{
+    "I'm fine, honey... you know your mother, tough as nails. Just a little dizzy.",
+    "Don't fuss over me, dear. I'm {name}, I've been through worse.",
+    "Sweetheart, it's nothing... I don't want you to worry about your old mom.",
+    "Just a headache, baby. You know how I get. It'll pass.",
+    "I feel completely fine! Stop looking at me like that, I raised you better than to worry.",
+    "Your mother is perfectly fine, dear. Now stop fretting over me.",
+    "I'm okay, sweetie. Let's not make a big deal out of nothing."
+};
 
     [Header("Unstable State - Truthful")]
     public List<string> unstableTruthfulConversations = new List<string>
-    {
-        "I'm {name}... still hurting but the medicine is helping a bit.",
-        "The pain is still there... but not as bad as before.",
-        "I'm {name}, {age} years old. I'm starting to feel a little better.",
-        "Thank you for helping... I still feel weak though.",
-        "It's improving slowly... but I'm not out of the woods yet."
-    };
+{
+    "Hi honey... Mom's still hurting but whatever you gave me is helping a bit.",
+    "The pain is still there, sweetie... but not as bad as before. You're doing great.",
+    "It's your mom, {age} years young. I'm starting to feel a little better, thanks to you.",
+    "Thank you for taking care of your mother... I still feel weak though.",
+    "You're a wonderful nurse, honey. It's improving slowly... but I'm not out of danger yet.",
+    "Mom's hanging in there, baby. The treatment is working.",
+    "Still not great, sweetheart, but you're helping. I'm proud of you."
+};
 
     [Header("Unstable State - Lying")]
     public List<string> unstableLyingConversations = new List<string>
-    {
-        "I'm totally fine now! {name} here, feeling great!",
-        "All better! I'm {name}, no more pain at all.",
-        "I don't need any more treatment, I'm completely recovered.",
-        "The pain is completely gone, I swear.",
-        "I'm {name} and I feel perfect now, thanks!"
-    };
+{
+    "I'm totally fine now, dear! Your mom's back to normal!",
+    "All better! See? {name}'s tough as always. No more pain at all.",
+    "I don't need any more treatment, honey. You've done enough.",
+    "The pain is completely gone, I promise. Stop worrying about me!",
+    "I feel perfect now, sweetie! You can focus on other patients.",
+    "Your mother is fine! I've always bounced back quickly, you know that.",
+    "See? Good as new! Now stop fussing over your old mom."
+};
 
     [Header("Improving State - Truthful")]
     public List<string> improvingTruthfulConversations = new List<string>
-    {
-        "Hi! I'm {name}. Feeling much better now, thank you.",
-        "I'm {name}, the treatment really helped. Almost back to normal.",
-        "Much better! I'm {age} and feeling like myself again.",
-        "The pain is mostly gone now. I'm {name}, thanks for your care.",
-        "I'm improving steadily. {name}'s the name, grateful for your help."
-    };
+{
+    "Hi baby! Mom's feeling much better now, you did wonderfully.",
+    "It's {name}, your proud mother. The treatment really helped, almost back to normal.",
+    "Much better, honey! Your {age}-year-old mom is feeling like herself again.",
+    "The pain is mostly gone now. You saved your mother's life, sweetheart.",
+    "I'm improving steadily thanks to you. You're an amazing nurse, and I'm not just saying that because you're my daughter.",
+    "You took such good care of me, dear. Mom's on the mend.",
+    "Feeling so much better! I knew my daughter would fix me up."
+};
 
     [Header("Improving State - Lying")]
     public List<string> improvingLyingConversations = new List<string>
-    {
-        "I'm {name}... actually still feeling some pain.",
-        "Well... I'm better but not as good as I'm saying. I'm {name}.",
-        "The pain isn't completely gone yet, if I'm being honest.",
-        "I'm {name}. Still a bit uncomfortable but didn't want to worry you.",
-        "Trying to be brave, but I still feel some symptoms."
-    };
+{
+    "I'm your mom... actually still feeling some pain, honey. Sorry for fibbing.",
+    "Well... Mom's better but not as good as I said. Didn't want you to worry.",
+    "The pain isn't completely gone yet, if I'm being honest with my daughter.",
+    "It's {name}. Still a bit uncomfortable but I didn't want to be a burden to you.",
+    "Trying to be brave for you, sweetie, but I still feel some symptoms.",
+    "Your mother is... okay, not great. I just didn't want to worry you more.",
+    "I may have exaggerated a bit, honey. Still feeling it."
+};
 
     [Header("Stable State - Truthful")]
     public List<string> stableTruthfulConversations = new List<string>
-    {
-        "Hi, I'm {name}. I'm feeling completely healthy now!",
-        "Hello! My name is {name}, I'm {age} years old and fully recovered.",
-        "Nice to meet you. I'm {name}, feeling great thanks to you!",
-        "Hey there! {name} here. Back to normal, thank you so much!",
-        "Greetings! I'm {name}, a {age} year old {sex}, and I feel wonderful!",
-        "Oh hello! My name is {name}. I'm completely better now!",
-        "Hi! I'm {name}. Everything is perfect, no more problems!",
-        "Welcome! I'm {name}, {age} years young and healthy!",
-        "Good to see you! {name}'s the name. Feeling fantastic!",
-        "Hello friend! You can call me {name}. I'm all better!"
-    };
+{
+    "Hi sweetheart! It's Mom. I'm feeling completely healthy now thanks to you!",
+    "Hello dear! Your mother {name}, {age} years old and fully recovered!",
+    "You saved me, honey. I'm {name}, feeling wonderful thanks to my brilliant daughter!",
+    "Hey baby! Mom's back to normal. You're an incredible nurse, I'm so proud!",
+    "Hi sweetie! It's your {age}-year-old mother, feeling great thanks to you!",
+    "Oh honey! I'm completely better now. You took such good care of your mom!",
+    "Hi dear! Everything is perfect, no more problems. My daughter the hero!",
+    "Hello baby! You can see your mom is all better now!",
+    "Good to see you smiling again, honey! Mom's feeling fantastic thanks to you!",
+    "Hello my dear! Your mother is all better and so grateful for you!"
+};
 
     [Header("Stable State - Lying")]
     public List<string> stableLyingConversations = new List<string>
-    {
-        "I'm {name}... maybe I pushed myself too hard, feeling a bit off.",
-        "Hi, I'm {name}. Probably nothing, but I'm feeling slightly unwell again.",
-        "I'm {name}. Everything's fine... mostly. Just a small concern.",
-        "Hello! {name} here. I might have overdone it, feeling tired.",
-        "I'm completely fine! Well... maybe a tiny bit of discomfort."
-    };
+{
+    "Hi honey... Mom might have pushed herself too hard, feeling a bit off again.",
+    "Hi sweetie. Probably nothing, but your mother is feeling slightly unwell again.",
+    "It's Mom. Everything's fine... mostly. Just a small concern, don't worry too much.",
+    "Hello dear! I might have overdone it. Your old mom is feeling tired.",
+    "I'm completely fine! Well... maybe a tiny bit of discomfort. Nothing for you to fuss about.",
+    "Your mother may have been a bit too optimistic. Feeling a little off, honey.",
+    "Don't tell anyone, but Mom's not feeling quite as good as I said earlier."
+};
 
     [Header("Settings")]
     public float lettersPerSecond = 20f;
