@@ -7,6 +7,7 @@ public class TemperatureCheck : MonoBehaviour
     public GameObject thermometer;
     public GameObject worldCanvas;
     public TextMeshProUGUI text;
+    public int patientCase;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,7 +20,18 @@ public class TemperatureCheck : MonoBehaviour
     public IEnumerator DisplayText()
     {
         worldCanvas.SetActive(true);
-        text.text = "Hmmm her temperature is only 35.2°C"; // Low temperature <36.1°C, normal = 36.1°C-37.2°C, high >37.2°C
+        switch (patientCase)
+        {
+            case 1:
+                text.text = "Hmmm his temperature is 38.5°C"; // High temperature
+                break;
+            case 2:
+                text.text = "Hmmm her temperature is 36.8°C"; // normal temperature
+                break;
+            case 3:
+                text.text = "Hmmm her temperature is only 35.2°C"; // Low temperature
+                break;
+        }
         yield return new WaitForSeconds(5f);
         text.text = "";
         worldCanvas.SetActive(false);

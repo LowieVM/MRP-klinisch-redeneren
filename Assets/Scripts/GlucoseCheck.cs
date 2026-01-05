@@ -10,6 +10,7 @@ public class GlucoseCheck : MonoBehaviour
 
     public GameObject worldCanvas;
     public TextMeshProUGUI text;
+    public int patientCase;
 
     private void Start()
     {
@@ -29,7 +30,18 @@ public class GlucoseCheck : MonoBehaviour
     public IEnumerator DisplayTextCoroutine()
     {
         worldCanvas.SetActive(true);
-        text.text = "Her glucose is 107"; // normal glucose 70-130 mg/dL before meals
+        switch(patientCase)
+        {
+            case 1:
+                text.text = "His glucose is 180"; // High glucose
+                break;
+            case 2:
+                text.text = "Her glucose is 107"; // Normal glucose
+                break;
+            case 3:
+                text.text = "Her glucose is 65"; // Low glucose
+                break;
+        }
         yield return new WaitForSeconds(5f);
         text.text = "";
         worldCanvas.SetActive(false);
